@@ -1,0 +1,12 @@
+시가총액 100위 통계
+http://data.krx.co.kr/contents/MMC/RANK/rank/MMCRANK001.cmd
+* 반응형 웹
+- 메인, 서브1, 서브2, 서브3 (공지사항)
+현대일렉트릭
+lg생활건강
+유한양행
+넷마블
+카카오페이
+한국항공우주
+SKIET
+CJ제일제당

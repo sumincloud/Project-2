@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웅진 인재채용</title>
+  <!-- 1. css초기화 -->
+  <link href="./css/reset.css" rel="stylesheet" type="text/css">
+  <!-- 2. common서식 -->
+  <link href="./css/common.css" rel="stylesheet" type="text/css">
+  <!-- 3. main서식 -->
+  <link href="./css/main.css" rel="stylesheet" type="text/css">
+  <!-- 4. 미디어쿼리 서식 -->
+  <link href="./css/media_tab.css" media="screen and (max-width: 1024px)" rel="stylesheet" type="text/css">
+  <link href="./css/media_mo.css" media="screen and (max-width: 768px)" rel="stylesheet" type="text/css">
+  <!-- 5. 인재채용 css서식 -->
+  <link rel="stylesheet" href="./css/hire_layout.css" type="text/css">
+  <!-- 파비콘 링크 -->
+  <link rel="shortcut icon" type="image/x-icon" href="http://chaesuehyun.dothome.co.kr/woogzin/images/fav.png">
+
+  
+  <!-- 아이콘폰트 주소 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- 제이쿼리 라이브러리 연결 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+</head>
+<body>
+  <!-- ㅡㅡㅡㅡㅡㅡㅡㅡ 헤더영역 ㅡㅡㅡㅡㅡㅡㅡㅡ -->
+  <header>
+    <div class="h_inner">
+      <!-- 로고 -->
+      <h1 class="logo">
+        <a href="index.html" title="메인페이지로 바로가기">
+          <img src="./images/logo.png" alt="상단로고">
+        </a>
+      </h1>
+      
+      <!-- gnb -->
+      <div class="inner1200">
+        <nav class="gnb_box">
+          <ul class="gnb">
+            <li>
+              <a href="./info_site.html" title="웅진소개">웅진소개</a>
+              <ul class="lnb">
+                <li><a href="./info_site.html" title="웅진소개">웅진소개</a></li>
+                <li><a href="#" title="CI">CI</a></li>
+                <li><a href="#" title="연혁">연혁</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./family_site.html" title="계열사">계열사</a>
+              <ul class="lnb">
+                <li><a href="./family_site.html" title="웅진 IT">웅진 IT</a></li>
+                <li><a href="#" title="웅진씽크빅">웅진씽크빅</a></li>
+                <li><a href="#" title="웅진북센">웅진북센</a></li>
+                <li><a href="#" title="렉스필드컨트리클럽">렉스필드컨트리클럽</a></li>
+                <li><a href="#" title="웅진플레이도시">웅진플레이도시</a></li>
+                <li><a href="#" title="웅진컴퍼스">웅진컴퍼스</a></li>
+                <li><a href="#" title="웅진헬스원">웅진헬스원</a></li>
+                <li><a href="#" title="놀이의 발견">놀이의 발견</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" title="지속가능경영">지속가능경영</a>
+              <ul class="lnb">
+                <li><a href="#" title="웅진재단">웅진재단</a></li>
+                <li><a href="#" title="사회공헌">사회공헌</a></li>
+                <li><a href="#" title="윤리경영">윤리경영</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" title="소식">소식</a>
+              <ul class="lnb">
+                <li><a href="#" title="공지사항">공지사항</a></li>
+                <li><a href="#" title="언론보도">언론보도</a></li>
+                <li><a href="#" title="홍보자료실">홍보자료실</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./hire_site.html" title="인재채용">인재채용</a>
+              <ul class="lnb">
+                <li><a href="./hire_site.html" title="인재상">인재상</a></li>
+                <li><a href="#" title="인사제도">인사제도</a></li>
+                <li><a href="#" title="직무소개">직무소개</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      
+      <!-- util -->
+      <div class="util">
+        <div class="qna"><a href="#" title="문의하기">문의하기</a></div>
+        <div class="select">
+          <div class="selected">
+            <div class="selected-value">한국어</div>
+            <div class="arrow"></div>
+          </div>
+          <ul>
+            <li class="option">한국어</li>
+            <li class="option">English</li>
+            <li class="option">中國語</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 토글버튼 -->
+    <input type="checkbox" id="toggle">
+    <label for="toggle">
+      <i class="fas fa-bars"></i>
+    </label>
+    <!-- 태블릿&모바일 토글 메뉴바 -->
+    <div id="toggle_bg"></div>
+    <nav id="toggle_menu">
+      <img src="./images/logo.png" alt="상단로고">
+      <label for="toggle" class="fas fa-times"></label>
+      <ul id="t_gnb">
+        <li>
+          <p>웅진소개<i class="fas fa-angle-down"></i></p>
+          <ul class="t_sub">
+            <li><a href="./info_site.html" title="웅진소개">웅진소개</a></li>
+            <li><a href="#" title="CI">CI</a></li>
+            <li><a href="#" title="연혁">연혁</a></li>
+          </ul>
+        </li>
+        <li>
+          <p>계열사<i class="fas fa-angle-down"></i></p>
+          <ul class="t_sub">
+            <li><a href="./family_site.html" title="웅진 IT">웅진 IT</a></li>
+            <li><a href="#" title="웅진씽크빅">웅진씽크빅</a></li>
+            <li><a href="#" title="웅진북센">웅진북센</a></li>
+            <li><a href="#" title="렉스필드컨트리클럽">렉스필드컨트리클럽</a></li>
+            <li><a href="#" title="웅진플레이도시">웅진플레이도시</a></li>
+            <li><a href="#" title="웅진컴퍼스">웅진컴퍼스</a></li>
+            <li><a href="#" title="웅진헬스원">웅진헬스원</a></li>
+            <li><a href="#" title="놀이의 발견">놀이의 발견</a></li>
+          </ul>
+        </li>
+        <li>
+          <p>지속가능경영<i class="fas fa-angle-down"></i></p>
+          <ul class="t_sub">
+            <li><a href="#" title="웅진재단">웅진재단</a></li>
+            <li><a href="#" title="사회공헌">사회공헌</a></li>
+            <li><a href="#" title="윤리경영">윤리경영</a></li>
+          </ul>
+        </li>
+        <li>
+          <p>소식<i class="fas fa-angle-down"></i></p>
+          <ul class="t_sub">
+            <li><a href="#" title="공지사항">공지사항</a></li>
+            <li><a href="#" title="언론보도">언론보도</a></li>
+            <li><a href="#" title="홍보자료실">홍보자료실</a></li>
+          </ul>
+        </li>
+        <li>
+          <p>인재채용<i class="fas fa-angle-down"></i></p>
+          <ul class="t_sub">
+            <li><a href="./hire_site.html" title="인재상">인재상</a></li>
+            <li><a href="#" title="인사제도">인사제도</a></li>
+            <li><a href="#" title="직무소개">직무소개</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- 문의하기, 언어설정 -->
+      <div class="util">
+        <div class="qna"><a href="#" title="문의하기">문의하기</a></div>
+        <div class="select">
+          <div class="selected">
+            <div class="selected-value">한국어</div>
+            <div class="arrow"></div>
+          </div>
+          <ul>
+            <li class="option">한국어</li>
+            <li class="option">English</li>
+            <li class="option">中國語</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  
+  <!-- ㅡㅡㅡㅡㅡ메인영역ㅡㅡㅡㅡㅡㅡ -->
+  <main id="fullpage" style="padding-top: 100px;">
+    <section class="hire_img">
+      <h2 class="title">인재채용</h2>
+      <article>
+        <div class="txt01">
+          <h2>인재채용</h2>
+          <p>전문성과 열정이 조화를 이룬 인재를 찾는 일에 최선을 다합니다.</p>
+        </div>
+      </article>
+      <hr>
+      <article id="hire_tab">
+        <h2 class="title">탭컨텐츠</h2>
+        <ul>
+          <li><a href="#" title="인재상" class="act">인재상</a>
+            <div class="tab">
+              <section class="ideal">
+                <h2>인재<span>상</span></h2>
+                <p>누구에게도 뒤지지 않을 실력, 자신의 일을 사랑하는 열정,<br>끊임없이 자기계발 의지가 있는 경쟁력을 갖춘 인재</p>
+                <!-- 인재상 첫 컨텐츠 -->
+                <article id="ideal_box">
+                  <h2 class="title">인재상 시작</h2>
+                  <div class="circle">
+                    <div class="center"><img src="./images/logo.png" alt="웅진로고"></div>
+                  </div>
+                  <ul class="icon_box">
+                    <li class="icon1">
+                      <div>
+                        <img src="./images/hire_ribbon_w.png" alt="전문인">
+                        <p>전문인</p>
+                      </div>
+                    </li>
+                    <li class="icon2">
+                      <div>
+                        <img src="./images/hire_idea_w.png" alt="창의인">
+                        <p>창의인</p>
+                      </div>
+                    </li>
+                    <li class="icon3">
+                      <div>
+                        <img src="./images/hire_passion_w.png" alt="열정인">
+                        <p>열정인</p>
+                      </div>
+                    </li>
+                    <li class="icon4">
+                      <div>
+                        <img src="./images/hire_trade_w.png" alt="조직인">
+                        <p>조직인</p>
+                      </div>
+                    </li>
+                  </ul>
+                </article>
+    
+                  <p id="btn01">VIEW MORE&#43;</p>
+                  <!-- 인재상 설명박스 -->
+                  <article id="ideal_txt">
+                    <h2 class="title">인재상 설명박스</h2>
+                    <div class="txt1">
+                      <h3>학습하는 전문인</h3>
+                      <img src="./images/hire_ribbon_b.png" alt="전문인">
+                      <h4>Professional</h4>
+                      <hr>
+                      <p>끊임없는 학습을 통해<br>자신을 성장시키고<br>프로정신과 담당업무에<br>대한 전문지식을 겸비한 사람</p>
+                      <div class="rule">
+                        <p>행동규범</p>
+                        <p>자기계발</p>
+                        <hr>
+                        <p>프로정신</p>
+                        <hr>
+                        <p>전문지식</p>
+                      </div>
+                    </div>
+                    <div class="txt2">
+                      <h3>혁신하는 창의인</h3>
+                      <img src="./images/hire_idea_b.png" alt="창의인">
+                      <h4>Creative</h4>
+                      <hr>
+                      <p>계속해서 새로운 것을 찾으며<br>시도하고 혁신과 독창성을<br>추구하는 사람</p>
+                      <div class="rule">
+                        <p>행동규범</p>
+                        <p>긍정적 사고</p>
+                        <hr>
+                        <p>변화주도</p>
+                        <hr>
+                        <p>독창성</p>
+                      </div>
+                    </div>
+                    <div class="txt3">
+                      <h3>성취하는 열정인</h3>
+                      <img src="./images/hire_passion_b.png" alt="열정인">
+                      <h4>Passion</h4>
+                      <hr>
+                      <p>끈기, 추진력, 의지,<br>일에 대한 열정을 지니고<br>자기 일에 책임을 다하는 사람</p>
+                      <div class="rule">
+                        <p>행동규범</p>
+                        <p>도전정신</p>
+                        <hr>
+                        <p>진취적 행동</p>
+                        <hr>
+                        <p>책임감</p>
+                      </div>
+                    </div>
+                    <div class="txt4">
+                      <h3>협력하는 조직인</h3>
+                      <img src="./images/hire_trade_b.png" alt="조직인">
+                      <h4>Cooperation</h4>
+                      <hr>
+                      <p>인간관계와 팀워크를<br>중시하고 유연한 사고로<br>더불어 일할 줄 아는 사람</p>
+                      <div class="rule">
+                        <p>행동규범</p>
+                        <p>상호존중</p>
+                        <hr>
+                        <p>팀워크</p>
+                        <hr>
+                        <p>유연성</p>
+                      </div>
+                    </div>
+                  </article>
+              </section>
+              
+              <!-- 인재철학 -->
+              <section class="ph">
+                <h2 class="title">인재철학1</h2>
+                <article id="ph1">
+                  <h2>인재철<span>학</span></h2>
+                  <div class="ph_box1">
+                    <div class="ph_img1">
+                      <p>Motive &amp; Focus</p>
+                      <p>웅진의 미래를 함께 열어갈 원동력은 '사람'과 ‘사랑’에게 있습니다.<br>경영정신인 또또사랑의 실천에 초점이 맞추어져 있는 웅진은<br>개인의 개성과 다양성을 존중하는 창의적 인재들을 육성하고 있습니다.</p>
+                    </div>
+                  </div>
+                  <div class="ph_box2">
+                    <div class="ph_img2">
+                      <p>Competence</p>
+                      <p>웅진의 경영정신인 '또또사랑'은 웅진의 핵심가치인 동시에 인사철학입니다.<br>사랑을 통해 인재들의 잠재된 능력을 이끌어 내는 것이 웅진의 인사와 교육 목표이며,<br>이렇게 해서 만들어진 '신기'는 웅진만의 경쟁력이 된다고 믿습니다.</p>
+                    </div>
+                  </div>
+                  <div class="ph_box3">
+                    <div class="ph_img3">
+                      <p>Worth &amp; Future</p>
+                      <p>채용부터 인재 양성에 이르는 전 과정에서 웅진은 '사람'을 가장 중요한 가치로 생각합니다.<br>사람에게 내재된 능력을 신뢰하고, 창조적 역량과 능력을 길러낸 웅진의 미래를 이끌어갈 리더로 육성하기 위해 노력합니다.</p>
+                    </div>
+                  </div>
+                </article>
+                    
+                <article id="ph2">
+                  <h2 class="title">인재철학2</h2>
+                  <p>사람 또 사람, 그리고 사랑! 그 놀라운 힘을 믿습니다.</p>
+                  <ul>
+                    <li><img src="./images/hire_teamwork.png" alt="teamwork"></li>
+                    <li class="balloon1_p">
+                      <div class="balloon1">
+                        <p>‘사람 또 사람’이란 사람의 가치와 잠재력에 대한 믿음을 강조하며, 조직 내 팀워크를 통한 사랑을 지향함을 뜻합니다.</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li class="balloon2_p">
+                      <div class="balloon2">
+                        <p>‘그리고 사랑’이란 사람과 사람, 리더와 구성원 간의 사랑으로 사람에게 잠재된 신기를 이끌어내는 요체를 뜻합니다.</p>
+                      </div>
+                    </li>
+                    <li><img src="./images/hire_together.png" alt="together"></li>
+                  </ul>
+                  <ul>
+                    <li><img src="./images/hire_population.png" alt="power"></li>
+                    <li class="balloon3_p">
+                      <div class="balloon3">
+                        <p>‘그 놀라운 힘을 믿습니다’란 웅진 전체에 신기가 발현된다면 그러한 신기문화를 통해 발현된 경쟁력이 상상 이상의 놀라운 힘이 되리라는 믿음을 뜻합니다.</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <a href="#" title="채용문의">채용문의</a>
+                </article>
+              </section>
+            </div>
+          </li>
+          <li><a href="#" title="인사제도">인사제도</a><div class="tab"></div></li>
+          <li><a href="#" title="직무소개">직무소개</a><div class="tab"></div></li>
+        </ul>
+      </article>
+    </section>
+    
+    <!-- 7. 푸터 -->
+    <section class="fullsection full7 recruit" style="position: relative; bottom: 0px;">
+      <h3>푸터</h3>
+      <footer>
+        <a href="#" title="위로 바로가기" class="t_btn">
+          <img src="./images/top_up.png" alt="위로 바로가기">
+        </a>
+        <div class="footer_top">
+          <nav>
+            <dl>
+              <dt><a href="#" title="웅진소개">웅진소개</a></dt>
+              <dd><a href="#" title="CI">CI</a></dd>
+              <dd><a href="#" title="연혁">연혁</a></dd>
+            </dl>
+            <dl>
+              <dt><a href="#" title="계열사">계열사</a></dt>
+              <dd><a href="#" title="웅진IT">웅진IT</a></dd>
+              <dd><a href="#" title="웅진씽크빅">웅진씽크빅</a></dd>
+              <dd><a href="#" title="웅진북센">웅진북센</a></dd>
+              <dd><a href="#" title="렉스필드컨트리클럽">렉스필드컨트리클럽</a></dd>
+              <dd><a href="#" title="웅진플레이도시">웅진플레이도시</a></dd>
+              <dd><a href="#" title="웅진컴퍼스">웅진컴퍼스</a></dd>
+              <dd><a href="#" title="웅진헬스원">웅진헬스원</a></dd>
+              <dd><a href="#" title="놀이의 발견">놀이의 발견</a></dd>
+            </dl>
+            <dl>
+              <dt><a href="#" title="지속가능경영">지속가능경영</a></dt>
+              <dd><a href="#" title="웅진재단">웅진재단</a></dd>
+              <dd><a href="#" title="사회공헌">사회공헌</a></dd>
+              <dd><a href="#" title="윤리경영">윤리경영</a></dd>
+            </dl>
+            <dl>
+              <dt><a href="#" title="소식">소식</a></dt>
+              <dd><a href="#" title="공지사항">공지사항</a></dd>
+              <dd><a href="#" title="언론보도">언론보도</a></dd>
+              <dd><a href="#" title="홍보자료실">홍보자료실</a></dd>
+            </dl>
+            <dl>
+              <dt><a href="#" title="인재채용">인재채용</a></dt>
+              <dd><a href="#" title="인재상">인재상</a></dd>
+              <dd><a href="#" title="인사제도">인사제도</a></dd>
+              <dd><a href="#" title="직무소개">직무소개</a></dd>
+            </dl>
+          </nav>
+        </div>
+        <address class="footer_btm">
+          <div class="btm_box">
+            <div>
+              <a href="index.html" title="메인페이지로 바로가기">
+              <img src="./images/footer_logo.png" alt="하단로고"></a>
+            </div>
+            <div>
+              <ul>
+                <li>대표이사 : 이수영 </li>
+                <li>사업자등록번호 : 208-81-06344</li>
+                <li>주소 : 서울특별시 중구 청계천로 24, 6~9층, 16층(04521)</li>
+                <li><a href="#">웹접근성 정책 안내</a></li>
+                <li><a href="#">법적고지</a></li>
+                <li><a href="#">영상정보처리방침</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+              </ul>
+            </div>
+            <label for="site"></label>
+            <select name="family_site" id="site">
+              <option value="#">FAMILY SITE</option>
+              <option value="#">웅진IT</option>
+              <option value="#">웅진씽크빅</option>
+              <option value="#">웅진북센</option>
+              <option value="#">렉스필드컨트리클럽</option>
+              <option value="#">웅진플레이도시</option>
+              <option value="#">웅진컴퍼스</option>
+              <option value="#">웅진헬스원</option>
+              <option value="#">놀이의 발견</option>
+            </select>
+          </div>
+        </address>
+        <p class="copy">COPYRIGHT 2008 WOONGJIN CORPORATION ALL RIGHT RESERVED.</p>
+      </footer>
+    </section>
+
+  </main>
+
+
+
+
+  <!--js 연결 -->
+  <script src="./script/hire_layout.js"></script>
+
+</body>
+</html>

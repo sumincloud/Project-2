@@ -1,0 +1,203 @@
+/* 공통서식 */
+:root{
+  --main_color_1:#FF8F00;
+  --main_color_2:#ffd105;
+  --main_color_3:#89C824;
+
+  --sub_color_1:#E61A23;
+  --sub_color_2:#009DDC;
+
+  --text_color_1:#333;
+
+  --container_size:1200px;
+
+  --font_size_1:3.125rem;  /* 50px */
+  --font_size_2:1.875rem;  /* 30px */
+  --font_size_3:1.25rem;  /* 20px */
+  --font_size_4:1.125rem;  /* 18px */
+  --font_size_5:1rem;  /* 16px */
+  --font_size_6:0.875rem;  /* 14px */
+  --font_size_7:0.813rem;  /* 13px */
+
+  --swiper-theme-color: #333333 !important;
+
+  --full_h: 100%;
+
+}
+
+
+/* ------------------------모바일 버전 서식----------------------- */
+@media screen and (max-width: 767px){
+  body{overflow-x: hidden;}
+  .t_btn{
+    right: 8%;
+    bottom: 5%;
+  }
+  .t_btn > img{
+    margin-top: 8px;
+    width: 50%;
+  }
+  /* --------------헤더서식------------ */
+  header{height: 50px;}
+  .h_inner{height: 50px;}
+  .logo{height: 50px;}
+
+  .fa-bars{
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    line-height: 30px !important;
+  }
+
+
+  /* ---------메인서식----------- */
+  .title dt{font-size: var(--font_size_3);}
+  .title dd{text-wrap: wrap;font-size: var(--font_size_5);margin-top: 20px;}
+  #fullpage .inner1200{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .full2, .full3, .full4, .full5, .full6, .full7{
+    margin-top: 50px;
+    height: calc(var(--full_h) - 50px);
+  }
+
+
+  /* 2. 웅진소개 */
+  .intro .inner1200{
+    height: 80vh;
+  }
+  .intro_box{max-width: 300px; max-height: 300px;}
+
+
+
+  /* 3. 계열사 */
+  .group .inner1200{height: 80vh;}
+  .wrap .rolling-list ul { 
+    height: 300px;
+  }
+  .wrap .rolling-list ul li { 
+    width: 200px; 
+    height: 40vh; 
+  }
+  /* 계열사 버튼 */
+  .group_btn > p{
+    font-size: var(--font_size_4);
+    font-weight: 600;
+    line-height: 50px;
+    height: 50px;
+  }
+
+  /* 4. 지속가능경영 */
+  .esg_list{margin-top: 30px;}
+  .esg_list li {
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  .esg_list div{
+    height: 100px;
+  }
+  .esg_list li:nth-of-type(2) div img{left: 80px;}
+  .esg_list li .sub_title{top: -100px;margin-top:15px;}
+  .esg_list li .sub_title dt{font-size: var(--font_size_4);}
+  .esg_list li .sub_title dd{font-size: var(--font_size_6);}
+  .esg .more{
+    margin-top: 30px;
+  }
+
+  /* 5. 웅진소식 */
+  .news .inner1200{
+    height: 80vh;
+  }
+  .news .title{padding-bottom: 10vh;}
+  .news_title{font-size: var(--font_size_5);}
+  .news_sub{font-size: var(--font_size_6);}
+
+  .mySwiper3 {
+    margin-top: 0px;
+  }
+  .swiper-btn{
+    font-size: var(--font_size_3);
+    right: 20px;
+    
+  }
+  .swiper-btn .swiper-button-next,  .swiper-btn .swiper-button-prev{
+    width: 40px;
+  }
+
+
+  /* 6. 인재채용 */
+  .recruit .inner1200{height: auto;}
+  .recruit .more{margin-top: 50px;}
+  .recruit_list .sub_title dd{text-wrap: wrap;}
+  .recruit_list li{
+    width: 90%; height: 100px;margin: 0 auto 10px auto;
+  }
+  .recruit_list li div img {
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  .recruit_list .sub_title{margin-left: 10px;}
+  .recruit_list .sub_title dt{font-size: var(--font_size_3);}
+  .recruit_list .sub_title dd{font-size: var(--font_size_6);}
+
+  .recruit_btn{display: block !important;}
+  .recruit_btn{
+    width: 30px;height: 30px;
+    border-radius: 50%;
+    background: white;
+    margin: 0 20px 0 0;
+    text-align: center;
+    position: absolute;
+    right: 0px;
+    top: 50%; transform: translateY(-50%);
+  }
+  .recruit_btn i{
+    line-height: 30px;
+    font-size: var(--font_size_3);
+  }
+
+
+  /* 7. 푸터서식 */
+  .btm_box{display: block;}
+  .btm_box div:nth-child(2){margin-left: 0;}
+  .btm_box ul{justify-content: center;margin: 80px auto 0 auto;}
+  .btm_box li{font-size: 11px;text-align: center;}
+  .btm_box li:nth-of-type(2){width:auto;}
+
+  #site{margin: 0 auto;display: block;position: relative;top: -120px;}
+  .btm_box div:nth-child(1){top: 160px;}
+  .copy{font-size: 11px;}
+
+
+  /* 토글메뉴 서식 */
+
+  /* 닫기버튼 서식 */
+  .fa-times{
+    color:var(--main_color_1);
+    font-size:2rem;
+    position:absolute;
+    right:40px;top:30px;
+  }
+
+  /* 토글메뉴바 서식 */
+  #toggle_bg{
+    display: none;
+  }
+  #toggle_menu{
+    width:100%;height:100%;
+    padding: 0 40px 0 40px;
+  }
+  #toggle_menu > img{
+    width: 50%;
+    margin: 30px 0 40px 0;
+  }
+
+  #toggle_menu  > .util{margin: 30px 40px 0 40px;}
+
+
+
+
+}

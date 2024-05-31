@@ -1,0 +1,10 @@
+skin 입힐 때
+bbs > skin > board > 새파일 만들어서 안에 넣기
+
+favicon 넣을 때
+bbs > theme > basic > head.sub.php
+<title><?php echo $g5_head_title; ?></title> 이 문장을 찾아서
+<link rel="shortcut icon" type="image/x-icon" href="http://seungyeon.dothome.co.kr/ksy/project2/images/jb5Pe45j.ico"> 형식으로 바꾸기
+
+header.php랑 footer.php에 있는 이미지 경로 닷홈에 업로드한 경로대로 바꾸기
+ex) <img src="http://seungyeon.dothome.co.kr/ksy/project2/images/footer_logo.png" alt="하단로고"></a>

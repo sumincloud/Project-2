@@ -1,0 +1,216 @@
+/* 공통서식 */
+:root{
+  --main_color_1:#FF8F00;
+  --main_color_2:#ffd105;
+  --main_color_3:#89C824;
+
+  --sub_color_1:#E61A23;
+  --sub_color_2:#009DDC;
+
+  --text_color_1:#333;
+
+  --container_size:1200px;
+
+  --font_size_1:3.125rem;  /* 50px */
+  --font_size_2:1.875rem;  /* 30px */
+  --font_size_3:1.25rem;  /* 20px */
+  --font_size_4:1.125rem;  /* 18px */
+  --font_size_5:1rem;  /* 16px */
+  --font_size_6:0.875rem;  /* 14px */
+  --font_size_7:0.813rem;  /* 13px */
+
+  --swiper-theme-color: #333333 !important;
+
+}
+
+
+
+
+
+/* ------------------------태블릿 버전 서식----------------------- */
+@media screen and (max-width: 1024px){
+  body{overflow: hidden;}
+  .quick{display: none !important;}
+  .fa-bars{display: block !important; }
+  /* --------------헤더서식------------ */
+  .h_inner{display: block;}
+  .h_inner .inner1200{display: none;}
+  .gnb{display: none;}
+  .h_inner > .util{display: none;}
+  .logo{
+    margin-left: 0%;
+    left: 50%; transform: translate(-50%,-50%);
+    width: 160px;
+  }
+  header{
+    background: white !important;
+    border-bottom: 1px solid #ccc !important;
+  }
+
+  /* ---------메인서식----------- */
+  #fullpage .inner1200{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .inner1200{
+    width: 100%;
+  }
+  .title dt{font-size: var(--font_size_2);text-align: center;}
+  .title dd{font-size: var(--font_size_4);text-align: center;text-wrap: wrap;}
+
+  .sub_title dt{font-size: var(--font_size_2);}
+  .sub_title dd{font-size: var(--font_size_4);}
+
+  .more > a{
+    font-size: var(--font_size_5);
+  }
+
+
+  /* 2. 웅진소개 */
+  .intro .inner1200{
+    display: block;
+    height: 80vh;
+  }
+  .intro .more{
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+    bottom: 0;
+  }
+  .intro_box{
+    margin: 30px auto 0 auto;
+    width: 50vh;
+    height: 50vh;position:relative;
+    animation: dung 1s infinite alternate;
+    max-width: 500px; max-height:500px;
+  }
+
+  /* 3. 지속가능경영 */
+  .esg .title{width: 100%;margin: 0 auto;}
+  .esg .title dd{text-wrap: wrap;}
+  .esg_list{display: block;}
+  .esg_list li{height: 150px;margin-bottom: 30px;}
+
+  .esg_list div{width: 100%;height: 150px;margin: 0 auto;overflow: hidden;}
+  .esg_list li:nth-of-type(1) > div{border-radius: 150px 0 0 0;}
+  .esg_list li:nth-of-type(2) > div{border-radius: 0;}
+  .esg_list li:nth-of-type(3) > div{border-radius: 0 0 150px 0;}
+
+  .esg_list li .sub_title{position: relative; top: -150px;color: white;}
+  .esg_list li .sub_title dt{font-size: 24px;}
+  .esg_list li .sub_title dd{font-size: var(--font_size_5); margin-top: 10px;}
+
+  .esg_list div img{position: relative; top: 50%;transform: translateY(-50%);filter: brightness(0.8);}
+  .esg_list li:nth-of-type(2) div img{top: 10px; left: 120px; transform: scale(1.6);}
+  
+  /* 4. 웅진의 소식 */
+  .news .inner1200{
+    position: relative;
+    display: block;
+    height: 70vh;
+  }
+  .news .title{display: block;}
+  .news .sub_title{text-wrap: wrap;}
+  .news .more{
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+    top: 90%;
+  }
+  .news_sub{
+    margin-bottom: 20px;
+  }
+  .mySwiper3{
+    margin-top: 80px;
+  }
+  .mySwiper3 .swiper-slide{
+    height: 100%;
+  }
+  .swiper-btn{
+    margin-top: 40px; right: 60px;
+  }
+
+
+  /* 6. 인재채용 */
+  .recruit_list{
+    display: block;
+  }
+  .recruit_list li{
+    width: 80%;
+    height: 150px;
+    margin: 0 auto 30px auto;
+  }
+  .recruit_list li > div{
+    display: flex;
+    text-align: left;
+    left: 0;
+    transform: translate(0,-50%);
+    width: 100%;
+  }
+  .recruit_list img{
+    margin-left: 60px;
+  }
+  .recruit_list .sub_title{
+    margin-top: 0;
+    margin-left: 20px;
+    padding-top: 10px;
+  }
+  .recruit_list .sub_title dt{
+    font-size: 24px;
+  }
+  .recruit_list .sub_title dd{
+    margin-top: 10px;
+    text-wrap: nowrap;
+    line-height: 140%;
+  }
+
+  .recruit_btn{
+    width: 60px;height: 60px;
+    border-radius: 50%;
+    background: white;
+    margin: 0 60px 0 0;
+    display: block !important;
+    text-align: center;
+    position: absolute;
+    right: 0px;
+    top: 50%; transform: translateY(-50%);
+  }
+  .recruit_btn i{
+    line-height: 60px;
+    font-size: var(--font_size_2);
+  }
+
+
+  /* 7. 푸터 */
+  footer{height: 270px;}
+  .footer_top{display: none;}
+  .footer_btm{width: 100%;}
+  .btm_box{display: block !important;}
+
+  .btm_box div:nth-child(1){
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+    top: 110px;
+  }
+  .btm_box div:nth-child(2){margin-left: 30px;}
+  #site{margin-right: 30px;position: absolute;right: 0; top: 10px;}
+
+  .btm_box li:nth-of-type(2){width:30%;text-wrap: nowrap;}
+  .btm_box li:nth-of-type(3){width:100%;text-wrap: wrap;}
+  .btm_box li:nth-of-type(7){text-wrap: wrap;}
+  .btm_box li:nth-of-type(2):after {display: none;}
+
+  .copy{position: absolute; 
+    left: 50%; transform: translateX(-50%);
+    top: 220px;
+    width: 100%;
+  }
+
+
+}
+
+@media screen and (max-width: 620px){  /* 620px보다 작아지면 인재채용의 버튼 숨겨지게함 */
+  .recruit_btn{display: none !important;}
+}
+
+
+
+

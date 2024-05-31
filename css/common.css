@@ -1,0 +1,373 @@
+@charset "utf-8";
+
+/* 프리텐다드 폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+
+
+html,body{width:100%;height:100%;} 
+body{
+  font-family: 'pretendard', "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  overflow-y: hidden;
+  color: var(--text_color_1);
+}
+a{color: var(--text_color_1);text-decoration: none;}
+
+/* 공통서식 */
+:root{
+  --main_color_1:#FF8F00;
+  --main_color_2:#ffd105;
+  --main_color_3:#89C824;
+
+  --sub_color_1:#E61A23;
+  --sub_color_2:#009DDC;
+
+  --text_color_1:#333;
+
+  --container_size:1200px;
+
+  --font_size_1:3.125rem;  /* 50px */
+  --font_size_2:1.875rem;  /* 30px */
+  --font_size_3:1.25rem;  /* 20px */
+  --font_size_4:1.125rem;  /* 18px */
+  --font_size_5:1rem;  /* 16px */
+  --font_size_6:0.875rem;  /* 14px */
+  --font_size_7:0.813rem;  /* 13px */
+
+  --swiper-theme-color: #333333 !important;
+}
+
+
+/* -----------------풀페이지 퀵버튼------------- */
+.quick{
+  position:fixed;
+  left:40px;top:50%;transform:translateY(-50%);
+  z-index:100000;
+  display: none;
+}
+.quick li{
+  width:6px;height:80px;
+  background: #ccc;
+  cursor:pointer;
+}
+.quick .on {background:var(--main_color_1);}
+.quick li:first-of-type{display: none;}
+.quick li:last-of-type{display: none;}
+
+
+
+
+/* --------------헤더서식------------ */
+header{
+  width: 100%;height: 100px;
+  position: fixed;
+  z-index: 100;
+  overflow: hidden;
+  background: rgba(255,255,255,0.5);
+}
+.h_inner{
+  width: 100%; height: 100px;
+  display:flex;
+  position: relative;
+  left: 0;
+}
+
+
+/* 상단로고 */  
+.logo{
+  width: 260px;height: 80px;margin-left: 3%;
+  position: relative;
+  top: 50%;transform: translateY(-50%);
+}
+.logo img{height: 100%;margin: 0 auto;}
+
+/* 메인메뉴 */
+.gnb{
+  display: flex;
+  height: 100%;
+}
+.gnb > li{
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.gnb > li > a{
+  line-height: 100px;
+  white-space: nowrap; /* 글씨 줄바꿈 방지 */
+  color: var(--text_color_1);
+  font-weight: bolder;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 호버시 밑줄 나오게 */
+.gnb > li > a::after {
+  content: " ";
+  display: block;
+  margin-top: -3px;
+  width: 100%;
+  transform: scaleX(0);
+  transition: 0.8s;
+}
+.gnb > li:nth-of-type(1) > a::after{
+  border-bottom: 3px solid var(--main_color_1);
+}
+.gnb > li:nth-of-type(2) > a::after{
+  border-bottom: 3px solid var(--main_color_2);
+}
+.gnb > li:nth-of-type(3) > a::after{
+  border-bottom: 3px solid var(--main_color_3);
+}
+.gnb > li:nth-of-type(4) > a::after{
+  border-bottom: 3px solid var(--sub_color_1);
+}
+.gnb > li:nth-of-type(5) > a::after{
+  border-bottom: 3px solid var(--sub_color_2);
+}
+.gnb > li:hover > a::after{
+  transform: scaleX(1);
+}
+
+
+
+/* 서브메뉴 */
+.lnb{
+  margin: 20px 0 20px 0;
+}   /* 서브메뉴 위아래 여백 */
+.lnb > li{
+  line-height: 40px;
+  width: 100%;
+}
+.lnb > li > a{
+  white-space: nowrap;
+  text-align: center;
+  width: 180px;
+}
+.lnb > li > a:hover{
+  text-decoration: underline;
+}
+/* util */
+.util{
+  display: flex; margin-right: 3%;
+  position: relative;
+  width: 260px;
+  padding: 30px 0 30px 0;
+}
+.util .qna{
+  width: 100px;height: 40px;
+  background: var(--main_color_1);
+  border-radius: 20px;
+  margin-right:30px;
+  border: 1px solid var(--main_color_1);
+}
+.util .qna:hover{
+  background: white;
+  border: 1px solid var(--main_color_1);
+}
+
+.util .qna a{text-align: center;line-height: 40px;display: block; color: white;}
+.util .qna a:hover{
+  color: var(--main_color_1);
+}
+
+
+.util .select{
+  color: var(--main_color_1);
+  line-height: 40px;
+}
+.util .selected{
+  width: 100px;height: 40px;
+  background: white;
+  border-radius: 20px;
+  border: 1px solid var(--main_color_1);
+  display: flex;
+  justify-content: center;
+}
+.util .selected:hover{
+  background: var(--main_color_1);
+  color: white;
+  cursor: pointer;
+  border: 1px solid var(--main_color_1);
+}
+.util .selected:hover .arrow{
+  width: 20px;
+  background: url("../images/angle_down_wh.svg") no-repeat 50%;
+  background-size: 65%;
+  margin-left: 2px;
+}
+.util .selected .arrow{
+  width: 20px;
+  background: url("../images/angle_down_oran.svg") no-repeat 50%;
+  background-size: 65%;
+  margin-left: 2px;
+}
+.util ul{
+  position: fixed;
+  display: none; /* 처음엔 옵션 안보이게 */
+}
+.util .option{
+  width: 100px;height: 40px;
+  background: var(--main_color_1);
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  border: 1px solid var(--main_color_1);
+}
+.util .option:hover{
+  cursor: pointer;
+  background: white;
+  color: var(--main_color_1);
+  border: 1px solid var(--main_color_1);
+}
+
+
+
+/* select 기본 화살표 제거후 새로 삽입 */
+.util .lang select::-ms-expand { 
+	display: none;
+}
+.util .lang select{
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+
+
+
+/* --------------메인서식------------ */
+
+
+
+
+
+/* --------------푸터서식------------ */
+
+
+
+
+
+
+/* 탑버튼 서식 */
+.t_btn{
+  position: fixed;
+  right: 8%;bottom: 6%;
+  z-index: 300;
+  background: white;
+  border-radius: 50%;
+  width: 40px;height: 40px;
+  text-align: center;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.t_btn > img{
+  margin: 0 auto;
+  width: 60%;
+  margin-top: 6px;
+}
+.t_btn:hover{filter: brightness(0.8);}
+
+
+
+/* -------------------반응형 서식--------------------- */
+
+.scroll-x{
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  /* &::-webkit-scrollbar {display: none;} */
+}
+
+
+/* 토글버튼 서식 */
+#toggle{display:none;}
+
+.fa-bars{
+  width: 60px;height: 60px;
+  position: fixed;
+  text-align: center;
+  line-height: 60px !important;
+  font-size: 30px;
+  top: 20px; right: 8%;
+  display: none !important;
+  cursor: pointer;
+}
+/* 닫기버튼 서식 */
+.fa-times{
+  color:var(--main_color_1);
+  font-size:2rem;
+  position:absolute;
+  right:70px;top:30px;
+}
+
+/* 토글메뉴바 서식 */
+#toggle_bg{
+  width: 100%;height: 100%;
+  top: 0;
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  display: none;
+}
+#toggle_menu{
+  position:fixed;
+  width:60%;height:100%;
+  top:0px;
+  right: -100%;
+  background:white;
+  padding: 0 70px 0 20px;
+  transition:0.5s;
+  box-sizing: border-box;
+}
+/* 전체메뉴 클릭시 체크박스가 체크되면서 토글메뉴바가 안으로 들어오게 한다. */
+#toggle:checked ~ #toggle_menu{right:0px;}
+#toggle:checked ~ #toggle_bg{display: block;}
+
+#toggle_menu > img{
+  width: 50%;
+  margin: 30px 0 60px 0;
+}
+
+
+/* 메인메뉴 서식 */
+#t_gnb > li p{
+  color:var(--text_color_1);
+  font-size:var(--font_size_3);
+  font-weight: 600;
+  line-height:280%;
+  display:block;/*반응영역 넓히기 위함*/
+  border-bottom:1px solid #333;
+  text-indent: 20px;
+}
+#t_gnb li{
+  border-bottom:1px solid rgba(255,255,255,0.5);
+  line-height: 280%;
+}
+#t_gnb li i{
+  float:right;
+  font-size:var(--font_size_4);
+  line-height: 280%;
+  color: var(--main_color_1);
+  text-indent: 0;
+}
+#toggle_menu .t_sub{
+  background:var(--main_color_1);
+  display:none;
+}
+#toggle_menu .t_sub > li {
+  text-indent:30px;
+}
+#toggle_menu .t_sub > li > a{
+  font-size: var(--font_size_4);
+  color: white;
+  font-weight: 300;
+}
+
+#toggle_menu  > .util{margin-top: 30px;}
+
+

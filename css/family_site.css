@@ -1,0 +1,737 @@
+@charset "utf-8";
+
+/* 공통서식 */
+:root{
+  --main_color_1:#FF8F00;
+  --main_color_2:#ffd105;
+  --main_color_3:#89C824;
+
+  --sub_color_1:#E61A23;
+  --sub_color_2:#009DDC;
+
+  --text_color_1:#333;
+
+  --container_size:1200px;
+
+  --font_size_1:3.125rem;  /* 50px */
+  --font_size_2:1.875rem;  /* 30px */
+  --font_size_3:1.25rem;  /* 20px */
+  --font_size_4:1.125rem;  /* 18px */
+  --font_size_5:1rem;  /* 16px */
+  --font_size_6:0.875rem;  /* 14px */
+  --font_size_7:0.813rem;  /* 13px */
+
+  --swiper-theme-color: #333333 !important;
+}
+
+hr{margin: 0;height: 0;}
+.footer_top{display: none;}
+footer{height: 270px;}
+
+/* ------헤더 배경색---------- */
+header{
+  background: white !important;
+  border-bottom: 1px solid #ccc;
+
+}
+
+/*section 태그 안에 있는 필수조건 title 없애는용도*/
+.hide_title{display: none;}
+
+/*홈페이지로 이동 more*/
+.more{
+  /* margin: 0 auto;  */
+  text-align: center; 
+  margin-top: 100px;
+}
+.more > a{margin: 0 auto;}
+.more > a:hover{color: var(--main_color_1);}
+
+.cotn4{width: 100%;}
+
+.woongin4, .woongin5{
+  position: absolute;
+}
+
+/*---------------------------------------------------------------*/
+/*공통 첫 컨텐츠 common*/
+.common{
+  /* width: 100%;height: 300px; */
+  /*백그라운드 이미지 들어가야함*/
+  background-image: url(../images/image1.png);
+  background-size: 100% 300px;
+  background-repeat: no-repeat;
+  height: 4000px;
+}
+.txt01{height: 250px; text-align: center; color: #fff;}
+.txt01 > h2{ padding: 70px 0px 30px 0px; font-size: var(--font_size_2);}
+.txt01 > p{font-size: var(--font_size_3);padding-bottom: 10px;}
+
+/*탭컨텐츠 상세내비게이션*/
+.tab_con > ul{
+  display: flex; 
+  justify-content: center;
+  width: 1200px;
+  height: 50px;
+  /* padding-left: 5%; */
+  margin: 0 auto;
+  /* border: 1px solid #333; */
+  
+}
+.tab_con > ul >li >a{text-align:center;}
+.tab_con > ul >li >a:hover{background: #fff; color: #333;}
+.tab_con > ul >li>a{
+  width: 150px; color: #fff;  
+  display: inline-block;
+  background: rgba(255,255,255,.3); 
+  border-top: 4px solid rgba(255,255,255,0.3);
+  height: 40px;
+  line-height: 18px;
+  padding-top: 15px;
+}
+.tab_con > ul >li:nth-child(3)>a{padding-top: 5px !important;}
+.tab_con > ul >li:nth-child(4)>a{padding-top: 5px !important;}
+
+/*탭컨텐츠 위에 노란 바*/
+.on{
+  border-top: 4px solid var(--main_color_2) !important;
+  background: #fff !important;
+  color: #333 !important;
+}
+/*-------------------------------------------------------------------*/
+/*탭컨텐츠 정렬을 위한 추가 서식*/
+.tab_con{position: relative; height: 2000px;}
+.con{ 
+  height: 2000px;
+  width: 100%;
+  position: absolute; top: 100px ; left: 0px;
+}
+
+.tab_con section{
+  position: relative;
+  z-index: 30;
+}
+/*---------------------------------------------------------------*/
+/*1. 디지털 혁신의 중심에 웅진이 있습니다.*/
+.cont1{width: 100%;}
+.woongin1{
+  width: 1200px; 
+  margin: 0 auto;
+}
+
+.woongin1 > h2{padding: 100px 0px; text-align: center; font-size: var(--font_size_2);}
+
+.woongin1 > div{
+  /* width: 1200px; */
+  height: 550px;
+  background: url(../images/image2.png);
+}
+.woongin1 ul{
+  width: 500px; 
+  height:250px;
+  position: relative;
+  top: 28%;
+  left: 10%;
+  overflow: hidden;
+}
+.woongin1 li{
+  padding: 35px 0px 0px 0px;
+  color: #fff;
+  /* transition: 1.5s; */
+  position: absolute;
+  opacity: 0;
+  top: -300px;
+}
+.woongin1 li:first-child{transition: 0.9s;}
+.woongin1 li:nth-child(2){transition: 1.2s;}
+.woongin1 li:last-child{transition: 1.5s;}
+
+.woongin1 li > p:first-child{
+  font-size: var(--font_size_3); padding-bottom: 10px;
+  font-weight: bold;
+}
+/*애니메이션 클래스*/
+.e_vent1{top: 0px !important; opacity: 1 !important;}
+.e_vent2{top: 81px !important; opacity: 1 !important;}
+.e_vent3{top: 162px !important; opacity: 1 !important;}
+
+/*---------------------------------------------------------------*/
+
+/*2. 서비스 제공 영역*/
+.cont2{width: 100%; height: 870px;}
+.woongin2{
+  width: 1200px;
+  margin: 0 auto;
+  height:870px;
+}
+.woongin2 > h2{
+  padding: 150px 0px 100px 0px; text-align: center; 
+  font-size: var(--font_size_2); line-height: 45px;
+}
+
+/*펼쳐지는 부분*/
+.woongin2  > div{
+  height: 520px;
+  display: flex;
+  /*box들의 기준점*/
+  position: relative;
+  overflow: hidden;
+}
+.box01, .box02, .box03{width: 400px; height: 420px; position: absolute; left: -500px;opacity: 0;}
+.box01{
+  background: rgba(255, 143, 0,.7); 
+  transition: 0.3s;
+  /* transition: 0.9s; */
+  bottom: 0px;
+}
+.box02{
+  background: rgba(255, 209, 5,.7); 
+  transition: 0.5s;
+  top: 9%;
+}
+.box03{
+  background: rgba(137, 200, 36,.7);
+  transition: 0.9s;
+  /* transition: 0.3s; */
+  top: 0px;
+}
+
+/*text정렬*/
+.woongin2  > div li:first-child{
+  margin: 130px 0px 20px 45px; 
+  font-size: var(--font_size_3); font-weight: bold;
+}
+.woongin2  > div li:nth-child(2){
+  margin: 0px 0px 100px 45px; 
+  font-size: var(--font_size_5);
+}
+.woongin2  > div li:last-child{
+  margin-left: 45px; 
+  font-size: var(--font_size_6);
+}
+
+/*애니메이션 클래스*/
+.e_vent4{bottom: 0px; left: 2% !important; opacity: 1;}
+.e_vent5{top: 9%; left: 33.5% !important;  opacity: 1;}
+.e_vent6{top: 0px; left: 65% !important; opacity: 1;}
+
+/*---------------------------------------------------------------*/
+/*3. 사업영역*/
+.cont3{
+  width: 100%; height: 700px; 
+  margin: 100px 0px 200px 0px;
+}
+.woongin3{
+  width: 1200px;
+  margin: 0 auto;
+  height: 700px;
+  /*box 456의 기준점*/
+  position: relative;
+}
+.box04, .box05, .box06{position: absolute;   transition: 0.5s;}
+
+/*사진 들어갈곳*/
+.box04{
+  width: 800px;height: 550px;
+  background: url(../images/image3.png); 
+  z-index: 5;
+  top: 10%; left: 20%;
+}
+/*텍스트 들어갈곳*/
+.box05{
+  width: 550px; height: 195px;
+  background: #C3EEFF;
+  /* right: 0px; bottom: 10%; */
+  z-index: 4;
+  bottom: 50%; right: 20%;
+  opacity: 0;
+}
+.box05 > p{
+  width: 400px; height: 95px; 
+  margin: 30px 0px 0px 68px;
+  font-size: var(--font_size_3);
+  line-height: 160%;
+}
+/*색상만 들어갈곳*/
+.box06{
+  width: 700px; height: 250px;
+  background: #009DDC;
+  /* bottom: 0px; right: 0px; */
+  z-index: 3;
+  bottom: 50%;
+  right: 15%;
+  opacity: 0;
+
+}
+
+/*애니메이션 클래스*/
+.e_vent7{left: 0px; top: 0px;}
+.e_vent8{right: 0px !important; bottom: 10% !important; z-index: 6; opacity: 1;}
+.e_vent9{ right: 0px; bottom: 0px; width: 850px; height: 550px; opacity: 1;}
+
+/*---------------------------------------------------------------*/
+/*4,5 마지막 스크롤 이벤트 사진과 텍스트 바뀌는거*/
+
+.cont4{
+  width: 100%; height: 1100px;
+  /* background: coral; */
+}
+.woo_fix{
+  width: 100%; height: 740px; background: cornflowerblue;
+  position: sticky; top: 100px;
+  /* overflow: hidden; */
+}
+.re_lative{
+  width: 100%; height: 740px;
+  position: relative;
+  background: beige;
+  overflow: hidden;
+}
+.woongin4, .woongin5{width: 100%;}
+.woongin4{
+  background-image: url(../images/image4.png);
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 740px;
+}
+.woongin5{
+  background: url(../images/image5.png); 
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 740px;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.box07 , .box08{width: 1200px; height: 740px; margin: 0 auto; }
+.box07 > p,.box08 > p{
+  text-align: center;
+  width: 939px; font-size: var(--font_size_2);margin: 0 auto;
+  padding-top: 370px; color: #fff;
+  line-height: 40px;
+}
+
+/*애니메이션*/
+.e_vent10{z-index: 10; opacity: 1;}
+
+
+/*---------------------------------------------------------------*/
+/*태블릿일경우 768px*/
+@media screen and (min-width:768px) and (max-width:1024px) {
+  footer{margin-top: 30px;}
+  .common{
+    /* width: 100%;height: 300px; */
+    /*백그라운드 이미지 들어가야함*/
+    background-image: url(../images/tablet1.png);
+    background-size: 100% 400px;
+    background-repeat: no-repeat;
+    height: 4300px;
+  }
+  .txt01{height: 350px;}
+  .txt01 > h2{ padding: 150px 0px 30px 0px; font-size: var(--font_size_2);}
+  .txt01 > p{font-size: var(--font_size_4);padding-bottom: 10px;}
+  .tab_con > ul{
+    display: flex; 
+    justify-content: center;
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+  }
+  .tab_con > ul >li>a{
+    width: 80px; color: #fff;  
+    display: inline-block;
+    background: rgba(255,255,255,.3); 
+    border-top: 4px solid rgba(255,255,255,.0);
+    height: 34px;
+    line-height: 18px;
+    padding-top: 15px;
+  }
+  .tab_con > ul >li:nth-child(3)>a{padding-top: 5px !important; height: 40px;}
+  .tab_con > ul >li:nth-child(4)>a{padding-top: 5px !important;height: 40px;}
+  .tab_con > ul >li:last-child>a{padding-top: 5px !important;height: 40px;}
+  
+  /*-------------------------------------------------------*/
+  /*1. 디지털 혁신의 중심에 웅진이 있습니다.*/
+  .woongin1{
+    width: 80%; 
+    margin: 0 auto;
+  }
+
+  .woongin1 > h2{padding: 100px 0px; text-align: center; font-size: var(--font_size_2);}
+
+  .woongin1 > div{
+    width: 100%;
+    /* height: 550px; */
+    background: url(../images/image2.png);
+  }
+  .woongin1 ul{
+    width: 340px; 
+    /* height:100%; */
+    position: relative;
+    top: 28%;
+    left: 0;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .woongin1 li{width: 340px; padding: 25px 0px 0px 0px;}
+  /*-------------------------------------------------------*/
+  /*2. 서비스 제공 영역*/
+  .cont2{width: 100%; height: 770px;}
+  .woongin2{
+    width: 80%;
+    margin: 0 auto;
+    height:870px;
+  }
+  .woongin2 > h2{
+    padding: 150px 0px 100px 0px; text-align: center; 
+    font-size: var(--font_size_2); line-height: 45px;
+  }
+  
+  /*펼쳐지는 부분*/
+  .woongin2  > div{
+    height: 545px;
+    display: flex;
+    /*box들의 기준점*/
+    position: relative;
+    overflow: hidden;
+  }
+  .box01, .box02, .box03{
+    width: 220px; height: 240px; 
+    position: absolute; 
+    left: -500px;opacity: 0;
+  }
+  .box01 > li, .box02 > li, .box03 > li{
+    width: 180px; 
+  }
+  .box01{
+    background: rgba(255, 143, 0,.7); 
+    transition: 0.3s;
+    /* transition: 0.9s; */
+    top: 0px;
+  }
+  .box02{
+    background: rgba(255, 209, 5,.7); 
+    transition: 0.5s;
+    top: 9%;
+  }
+  .box03{
+    background: rgba(137, 200, 36,.7);
+    transition: 0.9s;
+    /* transition: 0.3s; */
+    top: 100px !important;
+  }
+  
+  /*text정렬*/
+  .woongin2  > div li:first-child{
+    margin: 70px 0px 20px 25px; 
+    font-size: var(--font_size_3); font-weight: bold;
+  }
+  .woongin2  > div li:nth-child(2){
+    display: none;
+  }
+  .woongin2  > div li:last-child{
+    margin-left: 25px; 
+    font-size: var(--font_size_5);
+  }
+  .e_vent4{top: 0px; left: 5% !important; opacity: 1;}
+  .e_vent5{top: 9%; left: 33.5% !important;  opacity: 1;}
+  .e_vent6{top: 100px !important; left: 62% !important; opacity: 1;}
+
+  /*-------------------------------------------------------------*/
+  /*3. 사업영역*/
+  .cont3{ 
+    height: 600px;
+    margin: 150px 0px 0px 0px;
+  }
+  .woongin3{
+    width: 80%;
+    margin: 0 auto;
+    height: 460px;
+  }
+  
+  /*사진 들어갈곳*/
+  .box04{
+    width: 540px;height: 300px;
+    background: url(../images/tablet3.png); 
+    top: 10%; left: 8%;
+  }
+  /*텍스트 들어갈곳*/
+  .box05{
+    width: 480px; height: 150px;
+    background: #C3EEFF;
+    /* right: 0px; bottom: 10%; */
+    z-index: 4;
+    bottom: 30%; right: 20%;
+    opacity: 0;
+  }
+  .box05 > p{
+    width: 400px; height: 95px; 
+    margin: 20px 0px 0px 20px;
+    font-size: var(--font_size_4);
+    line-height: 160%;
+  }
+  /*색상만 들어갈곳*/
+  .box06{
+    width: 200px; height: 200px;
+  }
+  /*애니메이션 클래스*/
+  .e_vent7{left: 0px; top: 0px;}
+  .e_vent8{right: 0px !important; bottom: 10% !important; z-index: 6; opacity: 1;}
+  .e_vent9{ right: 0px; bottom: 0px; width: 540px; height: 300px; opacity: 1;}
+
+  /*---------------------------------------------------------------*/
+  /*4,5 마지막 스크롤 이벤트 사진과 텍스트 바뀌는거*/
+  .cotn4{
+    width: 100%; height: 1200px;
+    /* background: coral; */
+  }
+  .woo_fix{
+    width: 100%; height: 700px; background: cornflowerblue;
+    position: sticky; top: 25%;
+    /* overflow: hidden; */
+  }
+  .re_lative{
+    width: 100%; height: 700px;
+    position: relative;
+    background: beige;
+    overflow: hidden;
+  }
+  .woongin4, .woongin5{position: absolute; width: 100%;}
+  .woongin4{
+    background-image: url(../images/tablet4.png);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 700px;
+  }
+  .woongin5{
+    background: url(../images/tablet5.png); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 700px;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .box07 , .box08{width: 80%; height: 740px; margin: 0 auto; }
+  .box07 > p,.box08 > p{
+    text-align: center;
+    width: 490px; font-size: var(--font_size_2);margin: 0 auto;
+    padding-top: 300px; color: #fff;
+    line-height: 40px;
+  }
+
+  /*애니메이션*/
+  .e_vent10{z-index: 1000; opacity: 1;}
+}
+
+
+/*모바일인경우 375px*/
+@media screen and (max-width:767px) {
+  main{height: 3100px; padding-top: 50px !important;}
+  footer{margin-top: 30px;}
+  .more{margin-top: -150px;}
+  
+  .common{
+    width: 100%;height: 2800px;
+    background-image: url(../images/mobile1.png);
+    background-size: 100% 400px;
+    background-repeat: no-repeat;
+  }
+  .txt01{height: 350px;}
+  .txt01 > h2{ padding: 130px 0px 30px 0px; font-size: var(--font_size_2);}
+  .txt01 > p{font-size: var(--font_size_4);padding-bottom: 10px;}
+  .tab_con > ul{width: 100px;}
+  .tab_con > ul >li > a{display: none;}
+
+  /*-------------------------------------------------*/
+  /*1. 디지털 혁신의 중심에 웅진이 있습니다. */
+  .woongin1{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .woongin1 > h2{padding: 50px 15px; text-align: center; font-size: var(--font_size_4);}
+
+  .woongin1 > div{
+
+    /* width: 375px; */
+    height: 550px;
+    background-image: url(../images/mobile2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .woongin1 ul{
+    width: 200px; 
+    height:280px;
+    position: relative;
+    top: 28%;
+    left: 0;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .woongin1 li{
+    width: 195px;
+    padding: 25px 0px 0px 0px;
+  }
+  /*------------------------------------------------------*/
+  /*2. 서비스 제공 영역*/
+
+  .cont2{width: 100%; height: 570px;}
+  .woongin2{
+    width: 375px;
+    margin: 0 auto;
+    height:870px;
+  }
+  .woongin2 > h2{
+    width: 300px;
+    padding: 0px;
+    margin: 100px 37px 100px 37px; text-align: center; 
+    font-size: var(--font_size_4); line-height: 25px;
+  }
+  
+  /* 펼쳐지는 부분 */
+  .woongin2  > div{
+    height: 445px;
+    display: flex;
+    /* box들의 기준점 */
+    position: relative;
+    overflow: hidden;
+  }
+  .box01, .box02, .box03{
+    width: 300px; height: 40px; 
+    position: absolute; 
+    left: -500px;opacity: 0;
+  }
+  .box01 > li, .box02 > li, .box03 > li{
+    width: 180px; 
+  }
+  .box01{
+    background: rgba(255, 143, 0,.7); 
+    transition: 0.3s;
+    /* transition: 0.9s; */
+    top: 0px;
+  }
+  .box02{
+    background: rgba(255, 209, 5,.7); 
+    transition: 0.5s;
+    top: 11%;
+  }
+  .box03{
+    background: rgba(137, 200, 36,.7);
+    transition: 0.9s;
+    /* transition: 0.3s; */
+    top: 100px !important;
+  }
+  .woongin2  > div >li{transition: 0.5s;}
+  
+  /* text정렬 */
+  .woongin2  > div li:first-child{
+    margin: 11px 0px 0px 40px ; 
+    font-size: var(--font_size_3); font-weight: bold;
+  }
+  .woongin2  > div li:nth-child(2){
+    display: none;
+  }
+  .woongin2  > div li:last-child{
+    display: none;
+  }
+  /*펼쳐지기전 부여 클래스*/
+  .e_vent4{top: 0px; left: 9% !important; opacity: 1;}
+  .e_vent5{top: 11% !important; left: 9% !important;  opacity: 1;}
+  .e_vent6{top: 100px !important; left: 9% !important; opacity: 1;}
+
+  /*펼쳐지고난후 부여될 클래스*/
+  .to_ggle1{top: 65% !important;}
+  .to_ggle2{top: 77% !important;}
+
+  /*펼쳐지고난후 안에 박스 공통부여 클래스*/
+  .detail1{margin: 30px 0px 0px 45px !important; display: block !important;}
+
+  
+  /*-------------------------------------------------*/
+  /*3. 사업영역*/
+  .cont3{ 
+    width: 100%; height: 400px; 
+    margin: 150px 0px 0px 0px;
+  }
+  .woongin3{
+    width: 375px;
+    height: 305px;
+    margin: 0 auto;
+  }
+  
+  /* 사진 들어갈곳 */
+  .box04{
+    width: 330px;height: 180px;
+    background: url(../images/mobile3.png); 
+    top: 10%; left: 8%;
+  }
+  /* 텍스트 들어갈곳 */
+  .box05{
+    width: 325px; height: 150px;
+    background: #C3EEFF;
+    z-index: 4;
+    bottom: 30%; right: 0%;
+    opacity: 0;
+  }
+  .box05 > p{
+    width: 285px; height: 70px; 
+    margin: 75px 0px 0px 18px;
+    font-size: var(--font_size_6);
+  }
+  /* 색상만 들어갈곳 */
+  .box06{
+    width: 20px; height: 50px;
+  }
+  /* 애니메이션 클래스 */
+  .e_vent7{left: 3%; top: 0px;z-index: 6;}
+  .e_vent8{left: 0px !important; bottom: 10% !important;  opacity: 1;}
+  .e_vent9{ right: 0px; bottom: 0px; width: 220px; height: 250px; opacity: 1;}
+
+  /*-------------------------------------------------------*/
+  /*4,5 마지막 스크롤 이벤트 사진과 텍스트 바뀌는거*/
+  .cotn4{
+    width: 100%; height: 600px;
+  }
+  .woo_fix{
+    width: 100%; height: 393px; background: cornflowerblue;
+    position: sticky; top: 100px;
+  }
+  .re_lative{
+    width: 100%; height: 393px;
+    position: relative;
+    background: beige;
+    overflow: hidden;
+  }
+  .woongin4, .woongin5{position: absolute; width: 100%;}
+  .woongin4{
+    background-image: url(../images/mobile4.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 393px;
+  }
+  .woongin5{
+    background-image: url(../images/mobile5.png); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 393px;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .box07 , .box08{width: 375px; height: 393px; margin: 0 auto; }
+  .box07 > p,.box08 > p{
+    text-align: center;
+    width: 319px; font-size: var(--font_size_5);margin: 0 auto;
+    padding-top: 150px; color: #fff;
+    line-height: 30px;
+  }
+
+  /* 애니메이션 */
+  .e_vent10{z-index: 10; opacity: 1;}
+
+
+
+}
